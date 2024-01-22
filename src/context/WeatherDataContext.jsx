@@ -20,7 +20,7 @@ export default function WeatherDataContext({ children }) {
           `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=b29d125a8ce4887a94791a8363a2b2d6`
         );
         setWeatherData(response.data);
-        console.log(response);
+        console.log("weather", response.data);
       } catch (error) {
         console.error("Error fetching the weather data", error);
       } finally {
@@ -34,7 +34,7 @@ export default function WeatherDataContext({ children }) {
           `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=b29d125a8ce4887a94791a8363a2b2d6`
         );
         setForecastData(response.data);
-        console.log(response);
+        console.log("forecast", response.data);
       } catch (error) {
         console.error("Error fetching the forecast data", error);
       } finally {
