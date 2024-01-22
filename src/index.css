@@ -8,6 +8,50 @@ main {
   align-items: center;
   gap: 1em;
   min-width: 24em;
+  background-image: url("./assets/sunnyDay.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-color: whitesmoke;
+}
+
+.sunnyDay{
+  background-image: url("./assets/sunnyDay.png");
+  background-color: whitesmoke;
+}
+
+.cloudyDay{
+  background-image: url("./assets/cloudyDay.png");
+  background-color: rgb(116, 127, 143);
+}
+
+.rainyDay{
+  background-image: url("./assets/rainyDay.png");
+  background-color: rgb(81, 142, 177);
+}
+
+.snowyDay{
+  background-image: url("./assets/snowyDay.png");
+  background-color: rgb(93, 129, 150);
+}
+
+.clearNight{
+  background-image: url("./assets/sunnyDay.png");
+  background-color: rgb(22, 34, 83);
+}
+
+.cloudyNight{
+  background-image: url("./assets/cloudyNight.png");
+  background-color: rgb(54, 58, 77);
+}
+
+.rainyNight{
+  background-image: url("./assets/rainyNight.png");
+  background-color: rgb(81, 98, 107);
+}
+
+.snowyNight{
+  background-image: url("./assets/snowyNight.png");
+  background-color: rgb(51, 72, 85);
 }
 
 .c {
