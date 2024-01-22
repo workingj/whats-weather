@@ -20,35 +20,41 @@ function App() {
   return (
     <main>
       <h1>Whatsweather</h1>
-      <div id="main" className="c">
-        main
+      <div>
         <FaCloud color={"blue"} />
         <FaCloudRain size={"3rem"} />
         <FaCloudSun size={"3rem"} />
         <FaCloudMeatball size={"3rem"} />
-        <br />
-        <LuCloud size={"3rem"} />
-        <LuCloudy size={"3rem"} />
-        <LuDroplets size={"3rem"} />
-        <LuSun size={"3rem"} />
-        <br />
-        <PiCloud size={"3rem"} />
-        <PiCloudMoon size={"3rem"} />
-        <PiCloudSun size={"3rem"} />
-        <PiSun size={"3rem"} />
-        <br />
-        <WiDayCloudy size={"3rem"} />
-        <WiDayCloudyHigh size={"3rem"} />
-        <WiDayRainMix size={"3rem"} />
-        <WiDaySunnyOvercast size={"3rem"} />
+      </div>
+      <div id="main" className="c">
+        main
+        <div>
+          <LuCloud size={"3rem"} />
+          <LuCloudy size={"3rem"} />
+          <LuDroplets size={"3rem"} />
+          <LuSun size={"3rem"} />
+        </div>
       </div>
       <div id="forecast" className="c">
         forcast
+        <div>
+          <WiDayCloudy size={"3rem"} />
+          <WiDayCloudyHigh size={"3rem"} />
+          <WiDayRainMix size={"3rem"} color={"red"} />
+          <WiDaySunnyOvercast size={"3rem"} color={"green"} />
+          {/* https://react-icons.github.io/react-icons/icons/wi/ */}
+        </div>
       </div>
       <div id="text" className="c">
         <p>
           <b>Q:</b>How do hurricanes see? <br /> <b>A:</b> With one eye!
         </p>
+        <div>
+          <PiCloud size={"3rem"} />
+          <PiCloudMoon size={"3rem"} />
+          <PiCloudSun size={"3rem"} />
+          <PiSun size={"3rem"} />
+        </div>
       </div>
     </main>
   );
