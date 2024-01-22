@@ -25,6 +25,8 @@ function App() {
     daytime ? weatherClass = "cloudyDay" : "cloudyNight";
   } else if (data.weather[0].main === "Clear") {
     daytime ? weatherClass = "sunnyDay" : "clearNight";
+  } else if (data.weather[0].main === "Snow") {
+    daytime ? weatherClass = "snowyDay" : "snowyNight";
   }
 
   return (
