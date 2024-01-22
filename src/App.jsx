@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Text from "./components/Text";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,11 +14,7 @@ function App() {
       <div id="forecast" className="c">
         forcast
       </div>
-      <div id="text" className="c">
-        <p>
-          <b>Q:</b>How do hurricanes see? <br /> <b>A:</b> With one eye!
-        </p>
-      </div>
+      <Text />
     </main>
   );
 }
