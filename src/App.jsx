@@ -43,10 +43,9 @@ function App() {
 
   return (
     <main className={weatherClass}>
-      <h3>Whatsweather</h3>
-      <div>
-        {weatherIcon}
-        {/* https://react-icons.github.io/react-icons/icons/pi/ */}
+      <div className="top">
+        <h3>Whatsweather </h3>
+        <icon>{weatherIcon}</icon>
       </div>
       <div id="main" className="c">
         <WeatherDetailsComponent />

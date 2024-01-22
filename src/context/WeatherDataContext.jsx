@@ -11,7 +11,7 @@ export default function WeatherDataContext({ children }) {
   const [loading, setLoading] = useState(true);
 
   const lat = 52.520008;
-  const lon = 13.404954;
+  const lon = 33.404954;
 
   useEffect(() => {
     const fetchWeatherData = async () => {

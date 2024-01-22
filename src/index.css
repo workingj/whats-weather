@@ -112,3 +112,10 @@ main {
   padding: 1em;
   border-radius: 10px;
 }
+
+.top{
+  display: flex;
+  width: 13rem;
+  padding-top: 1rem;
+  justify-content: space-between;
+}
