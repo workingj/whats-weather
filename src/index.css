@@ -1,0 +1,36 @@
+/* https://github.com/sindresorhus/modern-normalize/tree/c997a1e1d37aadbf9b6bc46ed396e7d9ebc8632f */
+@import 'node_modules/modern-normalize/modern-normalize.css';
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  min-width: 24em;
+}
+
+.c {
+  display: flex;
+  border: 1px solid red;
+  min-height: 10em;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    /* padding: 2em; */
+  }
+
+  .c {
+    min-width: 90vw;
+    max-width: 30em;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .c {
+    width: 40em;
+  }
+}
