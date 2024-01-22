@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Text from "./components/Text";
 import {
   FaCloud,
   FaCloudRain,
@@ -45,11 +46,7 @@ function App() {
           {/* https://react-icons.github.io/react-icons/icons/wi/ */}
         </div>
       </div>
-      <div id="text" className="c">
-        <p>
-          <b>Q:</b>How do hurricanes see? <br /> <b>A:</b> With one eye!
-        </p>
-        <div>
+      <Text />
           <PiCloud size={"3rem"} />
           <PiCloudMoon size={"3rem"} />
           <PiCloudSun size={"3rem"} />
