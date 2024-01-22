@@ -4,7 +4,7 @@ import Text from "./components/Text";
 import { PiCloud, PiCloudMoon, PiCloudSun, PiSun } from "react-icons/pi";
 import { DataContext as WeatherDataContext } from "./context/WeatherDataContext";
 import Forecast from "./components/Forecast";
-import WeatherDetailsComponent from './components/WeatherDetailsComponent';
+import WeatherDetailsComponent from "./components/WeatherDetailsComponent";
 import {
   WiDayCloudy,
   WiDaySunnyOvercast,
@@ -27,21 +27,19 @@ function App() {
   }
   let weatherClass;
   if (weatherData.weather[0].main === "Rain") {
-    daytime ? weatherClass = "rainyDay" : "rainyNight";
+    daytime ? (weatherClass = "rainyDay") : "rainyNight";
   } else if (weatherData.weather[0].main === "Clouds") {
-    daytime ? weatherClass = "cloudyDay" : "cloudyNight";
+    daytime ? (weatherClass = "cloudyDay") : "cloudyNight";
   } else if (weatherData.weather[0].main === "Clear") {
-    daytime ? weatherClass = "sunnyDay" : "clearNight";
+    daytime ? (weatherClass = "sunnyDay") : "clearNight";
   } else if (weatherData.weather[0].main === "Snow") {
-    daytime ? weatherClass = "snowyDay" : "snowyNight";
+    daytime ? (weatherClass = "snowyDay") : "snowyNight";
   }
 
   return (
     <main className={weatherClass}>
-      <h1>Whatsweather</h1>
-
+      <h2>Whatsweather</h2>
       <div id="main" className="c">
-        main
         <WeatherDetailsComponent />
       </div>
       <Forecast />
