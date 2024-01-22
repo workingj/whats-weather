@@ -1,16 +1,17 @@
 import { useContext, useState } from "react";
 import "./App.css";
 import Text from "./components/Text";
-import { PiCloud, PiCloudMoon, PiCloudSun, PiSun } from "react-icons/pi";
+import {
+  PiCloud,
+  PiCloudMoon,
+  PiCloudSun,
+  PiSun,
+  PiCloudSnowLight,
+  PiCloudRainLight,
+} from "react-icons/pi";
 import { DataContext as WeatherDataContext } from "./context/WeatherDataContext";
 import Forecast from "./components/Forecast";
 import WeatherDetailsComponent from "./components/WeatherDetailsComponent";
-import {
-  WiDayCloudy,
-  WiDaySunnyOvercast,
-  WiDayRainMix,
-  WiDayCloudyHigh,
-} from "react-icons/wi";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,14 +27,19 @@ function App() {
     daytime = true;
   }
   let weatherClass;
+  let weatherIcon;
   if (weatherData.weather[0].main === "Rain") {
     daytime ? (weatherClass = "rainyDay") : "rainyNight";
+    weatherIcon = <PiCloudRainLight size={"3rem"} />;
   } else if (weatherData.weather[0].main === "Clouds") {
     daytime ? (weatherClass = "cloudyDay") : "cloudyNight";
+    weatherIcon = <PiCloud size={"3rem"} />;
   } else if (weatherData.weather[0].main === "Clear") {
     daytime ? (weatherClass = "sunnyDay") : "clearNight";
+    weatherIcon = <PiSun size={"3rem"} />;
   } else if (weatherData.weather[0].main === "Snow") {
     daytime ? (weatherClass = "snowyDay") : "snowyNight";
+    weatherIcon = <PiCloudSnowLight size={"3rem"} />;
   }
 
   return (
@@ -45,10 +51,7 @@ function App() {
       <Forecast />
       <div>
         <div>
-          <PiCloud size={"3rem"} />
-          <PiCloudMoon size={"3rem"} />
-          <PiCloudSun size={"3rem"} />
-          <PiSun size={"3rem"} />
+          {weatherIcon}
           {/* https://react-icons.github.io/react-icons/icons/pi/ */}
         </div>
       </div>
