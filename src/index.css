@@ -33,3 +33,10 @@ main {
     width: 40em;
   }
 }
+
+.Forecastentry {
+  display: block;
+  width: 4em;
+  height: 6em;
+  border: 1px solid red;
+}

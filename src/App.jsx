@@ -4,6 +4,7 @@ import Text from "./components/Text";
 
 import { PiCloud, PiCloudMoon, PiCloudSun, PiSun } from "react-icons/pi";
 import { DataContext as WeatherDataContext } from "./context/WeatherDataContext";
+import Forecast from "./components/Forecast";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,10 +21,7 @@ function App() {
       <div id="main" className="c">
         main
       </div>
-      <div id="forecast" className="c">
-        forcast
-        <div></div>
-      </div>
+      <Forecast />
       <div>
         <div>
           <PiCloud size={"3rem"} />
