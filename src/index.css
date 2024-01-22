@@ -12,6 +12,7 @@ main {
   background-repeat: no-repeat, repeat;
   background-position: center;
   background-color: whitesmoke;
+  height: 100vh;
 }
 
 .sunnyDay{
@@ -56,8 +57,9 @@ main {
 
 .c {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   min-height: 10em;
+  max-width: 340px;
   border-radius: 10px;
 }
 
@@ -77,10 +79,21 @@ main {
     width: 40em;
   }
 }
+#forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .Forecastentry {
   display: block;
-  width: 4em;
-  height: 6em;
-  border: 1px solid red;
+  /* padding: ; */
+  width: 16%;
+  /* height: 6em; */
+  border: 1px solid #ffffff55;
+  border-radius: 5px;
+  text-align: center;
+}
+#main, #text {
+  padding: 1em;
 }

@@ -11,10 +11,16 @@ export default function Forecast() {
   return (
     <div id="forecast" className="c">
       {forecastData.list &&
-        forecastData.list.slice(0, 10).map((item) => {
+        forecastData.list.slice(0, 12).map((item) => {
           return (
             <div className="Forecastentry" key={item.dt}>
+              <span>
               {getTime_HM_FromTimestamp(item.dt)}
+              </span>
+              <br />
+              <span>
+                {(item.main.temp - 273.15).toFixed(2) + "°C"}
+              </span>
             </div>
           );
         })}
