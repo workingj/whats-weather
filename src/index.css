@@ -8,6 +8,25 @@ main {
   align-items: center;
   gap: 1em;
   min-width: 24em;
+  background-image: url("./assets/sunnyDay.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-color: whitesmoke;
+}
+
+.sunDay{
+  background-image: url("./assets/sunnyDay.png");
+  background-color: whitesmoke;
+}
+
+.cloudyDay{
+  background-image: url("./assets/cloudyDay.png");
+  background-color: rgb(102, 99, 99);
+}
+
+.rainyDay{
+  background-image: url("./assets/rainyDay.png");
+  background-color: rgb(93, 129, 150);
 }
 
 .c {
