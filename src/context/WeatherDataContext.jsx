@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
-
 export const DataContext = createContext();
 
-export default function WeatherDataContext({children}) {
+export default function WeatherDataContext({ children }) {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -13,10 +12,9 @@ export default function WeatherDataContext({children}) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=0ffc61535e91922b0419673f2dcaaf95"
+          "https://api.openweathermap.org/data/2.5/weather?lat=52.84&lon=8.03&appid=2457f6e3daad00f3b011c6365dd3c430"
         );
         setData(response.data);
-        console.log(response);
       } catch (error) {
         console.error("Error fetching the data", error);
       } finally {
@@ -28,12 +26,12 @@ export default function WeatherDataContext({children}) {
 
   return (
     <DataContext.Provider
-        value={{
-            data,
-            loading
-        }}
+      value={{
+        data,
+        loading,
+      }}
     >
-        {children}
+      {children}
     </DataContext.Provider>
-  )
+  );
 }
