@@ -10,11 +10,11 @@ function WeatherDetailsComponent() {
   const currentDate = date.toLocaleDateString();
   const currentTime = date.toLocaleTimeString();
   return (
-    <div>
-      <h2>Temperature: {tempCelsius.toFixed(2)} °C</h2>
-      <h2>Weather: {weatherDescription}</h2>
-      <h2>Date: {currentDate}</h2>
-      <h2>Time: {currentTime}</h2>
+    <div className="detail">
+      <h4>Temperature: {tempCelsius.toFixed(2)} °C</h4>
+      <h4>Weather: {weatherDescription}</h4>
+      <h4>Date: {currentDate}</h4>
+      <h4>Time: {currentTime}</h4>
     </div>
   );
 }

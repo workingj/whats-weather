@@ -1,8 +1,8 @@
 import React from "react";
 import getJoke from "../utils/jokes";
+const joke = getJoke();
 
 export default function Text() {
-  const joke = getJoke();
   return (
     <div id="text" className="c">
       <p>
