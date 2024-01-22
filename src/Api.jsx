@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+
 function WheatherComponent() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
