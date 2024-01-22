@@ -3,14 +3,13 @@ import "./App.css";
 import Text from "./components/Text";
 import { PiCloud, PiCloudMoon, PiCloudSun, PiSun } from "react-icons/pi";
 import { DataContext as WeatherDataContext } from "./context/WeatherDataContext";
+import WeatherDetailsComponent from './components/WeatherDetailsComponent';
 import {
   WiDayCloudy,
   WiDaySunnyOvercast,
   WiDayRainMix,
   WiDayCloudyHigh,
 } from "react-icons/wi";
-import WheatherComponent from "./Api"; 
-
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,6 +25,7 @@ function App() {
 
       <div id="main" className="c">
         main
+        <WeatherDetailsComponent />
       </div>
       <div id="forecast" className="c">
         forcast
