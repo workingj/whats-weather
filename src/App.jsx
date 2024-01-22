@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import "./App.css";
 import Text from "./components/Text";
 import {
   PiCloud,
@@ -44,17 +43,16 @@ function App() {
 
   return (
     <main className={weatherClass}>
-      <h2>Whatsweather</h2>
+      <h3>Whatsweather</h3>
+      <div>
+        {weatherIcon}
+        {/* https://react-icons.github.io/react-icons/icons/pi/ */}
+      </div>
       <div id="main" className="c">
         <WeatherDetailsComponent />
       </div>
       <Forecast />
-      <div>
-        <div>
-          {weatherIcon}
-          {/* https://react-icons.github.io/react-icons/icons/pi/ */}
-        </div>
-      </div>
+      <div></div>
       <Text />
     </main>
   );
