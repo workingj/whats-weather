@@ -3,6 +3,7 @@ import "./App.css";
 import Text from "./components/Text";
 import { PiCloud, PiCloudMoon, PiCloudSun, PiSun } from "react-icons/pi";
 import { DataContext as WeatherDataContext } from "./context/WeatherDataContext";
+import Forecast from "./components/Forecast";
 import WeatherDetailsComponent from './components/WeatherDetailsComponent';
 import {
   WiDayCloudy,
@@ -13,7 +14,7 @@ import {
 
 function App() {
   const [count, setCount] = useState(0);
-  const { loading, data } = useContext(WeatherDataContext);
+  const { loading, weatherData } = useContext(WeatherDataContext);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -21,17 +22,17 @@ function App() {
   const now = Date.now();
 
   let daytime = false;
-  if (now > data.sys.sunrise || now < data.sys.sunrise) {
+  if (now > weatherData.sys.sunrise || now < weatherData.sys.sunrise) {
     daytime = true;
   }
   let weatherClass;
-  if (data.weather[0].main === "Rain") {
+  if (weatherData.weather[0].main === "Rain") {
     daytime ? weatherClass = "rainyDay" : "rainyNight";
-  } else if (data.weather[0].main === "Clouds") {
+  } else if (weatherData.weather[0].main === "Clouds") {
     daytime ? weatherClass = "cloudyDay" : "cloudyNight";
-  } else if (data.weather[0].main === "Clear") {
+  } else if (weatherData.weather[0].main === "Clear") {
     daytime ? weatherClass = "sunnyDay" : "clearNight";
-  } else if (data.weather[0].main === "Snow") {
+  } else if (weatherData.weather[0].main === "Snow") {
     daytime ? weatherClass = "snowyDay" : "snowyNight";
   }
 
@@ -43,10 +44,7 @@ function App() {
         main
         <WeatherDetailsComponent />
       </div>
-      <div id="forecast" className="c">
-        forcast
-        <div></div>
-      </div>
+      <Forecast />
       <div>
         <div>
           <PiCloud size={"3rem"} />
