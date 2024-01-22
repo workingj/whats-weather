@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./App.css";
 import Text from "./components/Text";
 
-
 import { PiCloud, PiCloudMoon, PiCloudSun, PiSun } from "react-icons/pi";
+import { DataContext as WeatherDataContext } from "./context/WeatherDataContext";
 
 function App() {
   const [count, setCount] = useState(0);
+  const {loading} = useContext(WeatherDataContext)
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <main>
@@ -17,8 +22,7 @@ function App() {
       </div>
       <div id="forecast" className="c">
         forcast
-        <div>
-        </div>
+        <div></div>
       </div>
       <div>
         <div>
