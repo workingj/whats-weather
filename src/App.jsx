@@ -7,11 +7,12 @@ import { DataContext as WeatherDataContext } from "./context/WeatherDataContext"
 
 function App() {
   const [count, setCount] = useState(0);
-  const {loading} = useContext(WeatherDataContext)
+  const { loading, data } = useContext(WeatherDataContext);
 
   if (loading) {
     return <div>Loading...</div>;
   }
+  console.log(data);
 
   return (
     <main>
