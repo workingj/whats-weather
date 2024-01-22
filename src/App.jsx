@@ -46,13 +46,15 @@ function App() {
           {/* https://react-icons.github.io/react-icons/icons/wi/ */}
         </div>
       </div>
-      <Text />
+      <div>
+        <div>
           <PiCloud size={"3rem"} />
           <PiCloudMoon size={"3rem"} />
           <PiCloudSun size={"3rem"} />
           <PiSun size={"3rem"} />
         </div>
       </div>
+      <Text />
     </main>
   );
 }
