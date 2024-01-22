@@ -8,14 +8,30 @@ import Forecast from "./components/Forecast";
 
 function App() {
   const [count, setCount] = useState(0);
-  const {loading} = useContext(WeatherDataContext)
+  const { loading, data } = useContext(WeatherDataContext);
 
   if (loading) {
     return <div>Loading...</div>;
   }
+  const now = Date.now();
+
+  let daytime = false;
+  if (now > data.sys.sunrise || now < data.sys.sunrise) {
+    daytime = true;
+  }
+  let weatherClass;
+  if (data.weather[0].main === "Rain") {
+    daytime ? weatherClass = "rainyDay" : "rainyNight";
+  } else if (data.weather[0].main === "Clouds") {
+    daytime ? weatherClass = "cloudyDay" : "cloudyNight";
+  } else if (data.weather[0].main === "Clear") {
+    daytime ? weatherClass = "sunnyDay" : "clearNight";
+  } else if (data.weather[0].main === "Snow") {
+    daytime ? weatherClass = "snowyDay" : "snowyNight";
+  }
 
   return (
-    <main>
+    <main className={weatherClass}>
       <h1>Whatsweather</h1>
 
       <div id="main" className="c">

@@ -37,8 +37,14 @@ export default function WeatherDataContext({ children }) {
         data,
         loading,
       }}
+      value={{
+        data,
+        loading,
+      }}
     >
       {children}
+      {children}
     </DataContext.Provider>
+  );
   );
 }
