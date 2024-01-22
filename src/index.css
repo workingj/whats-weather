@@ -93,7 +93,22 @@ main {
   border: 1px solid #ffffff55;
   border-radius: 5px;
   text-align: center;
+  background-color: #ffffff55;
+}
+
+.Forecastentry>span {
+  display: block;
+  padding: 0.3em 0;
 }
 #main, #text {
   padding: 1em;
+}
+
+.detail {
+  display: block;
+  background-color: #ffffff55;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  border-radius: 10px;
 }
